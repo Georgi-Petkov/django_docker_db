@@ -1,0 +1,16 @@
+{% load static %}
+<nav>
+  <div class="nav-wrapper #9c27b0 purple">
+    <img src="{% static 'get_quote/logo.svg' %}" alt="" height="65px" width="65px">
+    <a href="#" class="brand-logo"></a>
+    <ul id="nav-mobile" class="right">
+        {% if user.is_authenticated %}
+          <li><a href="#">Logout</a></li>
+         {% else %} 
+          <li><a href="#">signup</a></li>
+          <li><a href="#">login</a></li>
+         {% endif %} 
+    
+    </ul>
+  </div>
+</nav>

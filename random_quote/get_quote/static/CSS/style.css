@@ -1,0 +1,48 @@
+
+
+.parent {
+    display: grid;
+    place-items:center;
+    background-image: url("{% static 'get_quote/quote.jpg' %}") no-repeat;
+    width: 375px;
+    height: 582px;
+    resize: both;
+    overflow: auto;
+    }
+    
+    .child {
+    margin: 0 auto;
+    padding: 0.9rem;
+    border-radius: 10px;
+    width: 200px;
+    height: 220px;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+    }
+    .btn {
+          position: absolute;
+          bottom: 30px;
+          left: 130px;
+          border-right-width: thick;
+          text-align: center;
+          padding: 3px;
+          border-radius: 10px;
+          font-size: xx-large;
+          color: white;
+          background-color:grey;
+  }
+  
+    #container {
+        position: relative;
+        text-align: center;
+    }
+
+  #btn {
+        position: relative;
+        text-align: center;
+  }
+
+    body {
+    font-family: Comic Sans MS, serif;
+    }
