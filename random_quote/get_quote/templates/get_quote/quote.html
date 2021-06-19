@@ -1,13 +1,13 @@
 {% extends "get_quote/layout.html" %}
 
 {% block body %}
-<div class="parent" >
+<div class="container">
     <div class="child">
         {{ quote_text }}   
         <p>{{ quote_author }}</p>
-    </div>
-</div>   
-<div id="btn">
-    <button class="btn" onClick="window.location.reload();">New quote</button>
-</div>   
+    </div> 
+    <div id="btn">
+        <button  class= 'btn' onClick="window.location.reload();">New quote</button>
+    </div>  
+</div> 
 {% endblock %}  
