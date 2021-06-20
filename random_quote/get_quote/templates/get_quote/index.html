@@ -1,8 +1,12 @@
-{% extends "get_quote/layout.html" %}
-{% load static %}
-
 {% block body %}
+<<<<<<< HEAD
+=======
+    {{ request.user }}
+    {% for quote in quotes %}
+        <p>{{ quote.quote }}</p>
+    {% endfor %} 
+>>>>>>> 2aef6197416c84bf3b38d36bd35eacd3782dc88e
     <div id="btn">
         <a class="btn" href="{% url 'get_quote' %}"  role="button" aria-pressed="true">Get it!</a>
-    </div>
+    </div>   
 {% endblock %}
