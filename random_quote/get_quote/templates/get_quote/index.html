@@ -1,11 +1,10 @@
-{% extends "get_quote/layout.html" %}
-{% load static %}
-
 {% block body %}
-    <img src="{% static 'get_quote/inspiration.gif' %}" alt="" height="450px" width="375px">    
-        
+    {{ request.user }}
+    {% for quote in quotes %}
+        <p>{{ quote.quote }}</p>
+    {% endfor %} 
     <div id="btn">
         <a class="btn" href="{% url 'get_quote' %}"  role="button" aria-pressed="true">Get it!</a>
-    </div>
+    </div>   
 {% endblock %}
     
