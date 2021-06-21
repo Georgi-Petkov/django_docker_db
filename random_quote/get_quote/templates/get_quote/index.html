@@ -1,10 +1,13 @@
+{% extends "get_quote/layout.html" %}
+
 {% block body %}
-    {{ request.user }}
-    {% for quote in quotes %}
-        <p>{{ quote.quote }}</p>
-    {% endfor %} 
+<div class="container">
+    <div class="child">
+        <h6>Need some inspiration?</h6>
+    </div> 
     <div id="btn">
         <a class="btn" href="{% url 'get_quote' %}"  role="button" aria-pressed="true">Get it!</a>
-    </div>   
+    </div> 
+</div>  
 {% endblock %}
     

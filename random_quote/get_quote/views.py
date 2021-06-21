@@ -4,9 +4,10 @@ from . models import Quote
 # Create your views here.
 
 def index(request):
-    quotes = Quote.objects.all()
-    return render(request,"get_quote/index.html", {
-        "quotes":quotes
+    quote = Quote.objects.first()
+    return render(request,"get_quote/quote.html", {
+        "quote_text":quote.quote,
+        "quote_author": quote.author
     })
     
 
