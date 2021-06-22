@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.urls.base import reverse
 from django.contrib.auth import login, logout, authenticate
 
+
 # Create your views here.
 def index(request):
     if not request.user.is_authenticated:
@@ -26,6 +27,10 @@ def login_view(request):
 
 def logout_view(request):
     logout(request)
-    return render(request, "users/login.html", {
+    return render(request, "get_quote/index.html", {
         "message": "Logged out."
     })
+
+
+
+    

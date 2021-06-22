@@ -1,6 +1,8 @@
 from django.shortcuts import render
 import numpy as np
 from . models import Quote
+from django.http import JsonResponse
+
 # Create your views here.
 
 def index(request):
@@ -23,4 +25,9 @@ def id_quote(request):
     return render(request,"get_quote/index.html", {
         "quotes":quotes
     })
+
+
+def n_quotes(request, *args, **kwargs):
+    data = Quote.objects.all().count()
+    return JsonResponse(data)    
 
